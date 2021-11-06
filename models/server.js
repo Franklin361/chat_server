@@ -24,7 +24,7 @@ class Server {
         // Desplegar el directorio público
         
         this.app.use(cors({
-            origin:'*', 
+            origin:'https://musing-curie-df3466.netlify.app', 
             credentials:true,            //access-control-allow-credentials:true
             optionSuccessStatus:200
         }));
