@@ -22,8 +22,11 @@ class Server {
 
     middlewares() {
         // Desplegar el directorio público
+        
         this.app.use(cors({
-            origin: true
+            origin:'*', 
+            credentials:true,            //access-control-allow-credentials:true
+            optionSuccessStatus:200
         }));
         this.app.use(express.json());
         
