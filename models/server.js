@@ -22,12 +22,8 @@ class Server {
 
     middlewares() {
         // Desplegar el directorio público
-        // origin:'https://musing-curie-df3466.netlify.app', 
-        this.app.use(cors({
-            origin:'https://musing-curie-df3466.netlify.app', 
-            credentials:false,            //access-control-allow-credentials:true
-            optionSuccessStatus:200
-        }));
+        
+        this.app.use(cors());
         this.app.use(express.json());
         
         this.app.use('/api/login', require('../router/auth.router'))
