@@ -22,7 +22,9 @@ class Server {
 
     middlewares() {
         // Desplegar el directorio público
-        this.app.use(cors());
+        this.app.use(cors({
+            origin: true
+        }));
         this.app.use(express.json());
         
         this.app.use('/api/login', require('../router/auth.router'))
